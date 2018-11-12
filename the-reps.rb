@@ -151,11 +151,39 @@ p get_primes 100
 # man, if only i had known there was a built in method....should have expected that
 
 # ----------------------------------------------------
+# HANGMAN!!!!!!
+
+# Make a hangman ruby console game.  You must have a Word class.  You should also have a `word_array` containing a couple dozen words to randomly choose from.  And then use `loop` for the main game logic with repeated guessing, and `break` when the game is over.  
+
+#### Suggested methods for your Word class
 
 
+# * `initialize` -- perhaps make this take a parameter like `desired_word`
 
+# * `check_letter?` and/or `.contains`
 
+# * `.print_stats`: This could call the three below 
 
+# * `.render` (show with blanks for unguessed letters and letters for guessed letters)
+
+# * `.print_remaining_guesses`
+
+# * `.print_guessed_letters`
+
+word_array = ["Xbox", "Playstation", "Sega", "Gamecube", "Atari", "Nintendo", "Dreamcast", "Gameboy"]
+
+class Word
+	def initialize desired_word
+
+	end
+	def check_letter?
+
+	end
+	def print_stats
+		print_remaining_guesses
+		print_guessed_letters
+	end
+end
 
 
 
