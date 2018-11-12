@@ -56,7 +56,7 @@ def toonify accent, sentence
 	end
 end
 
-p toonify("daffy", "so you smell like sausage")
+# p toonify("daffy", "so you smell like sausage")
 
 # ---------------------------------------------
 
@@ -83,18 +83,22 @@ end
 # => "woN I wonk tahw a VT rennid sleef ekil"
 # letter_reverse("Put Hans back on the line")
 # => "tuP snaH kcab no eht enil"
-letters = ['now i know what a tv dinner feels like']
+# letters = ['now i know what a tv dinner feels like']
 
-letters.each do |word|
-	p word
-end
-
+# letters.each do |word|
+# 	p word
+# end
 
 def letter_reverse str
-	str.each
-end	
-# p letter_reverse "now i know what a tv dinner feels like"
+	original_array = str.split(" ")
+	return_array = []
+	original_array.each do |str|
+		return_array << str.reverse
+	end
+	return_array.join(" ")
+end
 
+p letter_reverse "now i know what a tv dinner feels like"
 
 
 # ----------------------------------------------
@@ -110,8 +114,8 @@ def longest str
 	str.max_by(&:length)
 end
 
-p longest(["oh", "good", "grief"])
-p longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "love"])
+# p longest(["oh", "good", "grief"])
+# p longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "love"])
 
 # ----------------------------------------------------
 
