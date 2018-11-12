@@ -50,13 +50,13 @@ end
 
 def toonify accent, sentence
 	if accent == "daffy" 
-		sentence "s" == "th"
-	elsif accent == "elmor" 
-		sentence "r" == "w"
+		sentence.gsub(/s/, "th")
+	elsif accent == "elmer" 
+		sentence.gsub(/r/, "w")
 	end
 end
 
-# p toonify ("daffy", "so you smell like sausage")
+p toonify("daffy", "so you smell like sausage")
 
 # ---------------------------------------------
 
