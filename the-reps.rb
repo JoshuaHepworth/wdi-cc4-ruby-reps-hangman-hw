@@ -34,3 +34,49 @@ end
 # p transmogrifier 5,4,3
 # p transmogrifier 13,12,5
 # p transmogrifier 42,13,7
+
+# ------------------------------------------
+
+## 3. `toonify`
+
+# Write a method called `toonify` that takes two parameters, `accent` and `sentence`.
+# - If `accent` is the string `"daffy"`, return a modified version of `sentence` with all "s" replaced with "th".
+# - If the accent is `"elmer"`, replace all "r" with "w".
+# - Feel free to add your own accents as well!
+# - If the accent is not recognized, just return the sentence as-is.
+
+# toonify("daffy", "so you smell like sausage")
+# #=> "tho you thmell like thauthage"
+
+def toonify accent, sentence
+	if accent == "daffy" 
+		sentence "s" == "th"
+	elsif accent == "elmor" 
+		sentence "r" == "w"
+	end
+end
+
+# p toonify ("daffy", "so you smell like sausage")
+
+# ---------------------------------------------
+
+## 4. `word_reverse`
+
+# Write a method `word_reverse` that accepts a single argument, a string. The method should return a string with the order of the words reversed. Don't worry
+# about punctuation.
+
+# #word_reverse("Now I know what a TV dinner feels like")
+# # => "like feels dinner TV a what know I Now"
+
+def word_reverse str
+	str.reverse
+end
+p word_reverse "now i know what a tv dinner feels like"
+
+
+
+
+
+
+
+
