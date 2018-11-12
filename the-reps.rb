@@ -113,3 +113,70 @@ end
 p longest(["oh", "good", "grief"])
 p longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "love"])
 
+# ----------------------------------------------------
+
+# 7. * Write a method called `check_prime?` that will test whether a number is Prime. The method will return true if Prime, false if not.
+
+# * Write another method called `get_primes` that will print all the Primes up to an arbitrary limit. For example, if you invoke your method with `get_primes 100`, it will print all the Prime numbers up to and including 100. This method can call on the previous `check_prime?` method.
+
+# > Hints/reminders/notes: A Prime number is a number that is not evenly divisible by another number except 1 and itself. To test whether a number is Prime, you only need to test as far as the **square root** of that number. This is advisable for optimization and testing large numbers.
+
+def check_prime? num
+  return false if num <= 1
+  Math.sqrt(num).to_i.downto(2).each {|i| return false if num % i == 0}
+  true
+end
+
+p check_prime? 2
+
+def get_primes max
+	primes_arr = []
+
+	i = 2
+	while i < max
+		if check_prime?(i)
+			primes_arr << i
+		end
+		i += 1
+	end
+	primes_arr
+end
+
+p get_primes 100
+
+# man, if only i had known there was a built in method....should have expected that
+
+# ----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
