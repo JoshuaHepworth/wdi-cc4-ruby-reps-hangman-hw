@@ -98,7 +98,7 @@ def letter_reverse str
 	return_array.join(" ")
 end
 
-p letter_reverse "now i know what a tv dinner feels like"
+# p letter_reverse "now i know what a tv dinner feels like"
 
 
 # ----------------------------------------------
@@ -131,7 +131,7 @@ def check_prime? num
   true
 end
 
-p check_prime? 2
+# p check_prime? 2
 
 def get_primes max
 	primes_arr = []
@@ -146,7 +146,7 @@ def get_primes max
 	primes_arr
 end
 
-p get_primes 100
+# p get_primes 100
 
 # man, if only i had known there was a built in method....should have expected that
 
@@ -172,6 +172,9 @@ p get_primes 100
 
 word_array = ["Xbox", "Playstation", "Sega", "Gamecube", "Atari", "Nintendo", "Dreamcast", "Gameboy"]
 
+alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", 
+"L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
 class Word
 	def initialize desired_word
 
@@ -186,6 +189,24 @@ class Word
 end
 
 
+
+loop do
+	print "Hey! would you like to play Hangman? (or, type Q to quit) -> "
+	input = gets.chomp
+
+	if input == "q"
+		puts "I get it, you're scared. Bye!"
+		break
+	else
+		print "#{input} you say? Well then lets get started! (type P to start game)"
+		input = gets.chomp
+			if input == "p"
+				word_array.each do |x|
+					print "_ "
+			end
+		end
+	end
+end
 
 
 
