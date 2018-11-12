@@ -71,12 +71,45 @@ end
 def word_reverse str
 	str.split.reverse.join(' ')
 end
-p word_reverse "now i know what a tv dinner feels like"
+# p word_reverse "now i know what a tv dinner feels like"
+
+# -------------------------------------------------------
+# 5. letter reverse
+
+# Write a method `letter_reverse` that accepts a single argument, a string. The method should maintain the order of words in the string but reverse the letters in each word. Don't worry about punctuation. This will be very similar to round 4 except you won't need to split them with a space.
+
+
+# letter_reverse("Now I know what a TV dinner feels like")
+# => "woN I wonk tahw a VT rennid sleef ekil"
+# letter_reverse("Put Hans back on the line")
+# => "tuP snaH kcab no eht enil"
+letters = ['now i know what a tv dinner feels like']
+
+letters.each do |word|
+	p word
+end
+
+
+def letter_reverse str
+	str.each
+end	
+# p letter_reverse "now i know what a tv dinner feels like"
 
 
 
+# ----------------------------------------------
+
+# 6.Write a method `longest` that accepts a single argument, an array of strings. The method should return the longest word in the array. In case of a tie, the method should return either.
 
 
+# longest(["oh", "good", "grief"]) # => "grief"
+# longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "love"])
+# => "unrequited"
 
+def longest str
+	str.max_by(&:length)
+end
 
+p longest(["oh", "good", "grief"])
+p longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "love"])
 
