@@ -69,7 +69,7 @@ end
 # # => "like feels dinner TV a what know I Now"
 
 def word_reverse str
-	str.reverse
+	str.split.reverse.join(' ')
 end
 p word_reverse "now i know what a tv dinner feels like"
 
