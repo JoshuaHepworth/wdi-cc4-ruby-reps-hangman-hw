@@ -176,18 +176,28 @@ alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
 "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 class Word
-	def initialize desired_word
+	def initialize
 
 	end
 	def check_letter?
 
 	end
 	def print_stats
-		print_remaining_guesses
-		print_guessed_letters
+		print remaining_guesses
+		print guessed_letters
+	end
+	def remaining_guesses
+		# number of guesses left
+	end
+	def guessed_letters
+		# show the letters
+	end
+	def render
+		# show unguessed letters with blanks, and letters for guessed letters
 	end
 end
 
+my_game = Word.new 
 
 
 loop do
@@ -203,12 +213,13 @@ loop do
 		input = gets.chomp
 			if input == "p"
 				word_array.each do |x|
+					word_array.sample
 					print "_ "
 			end
-			puts "\n\n"
 			alphabet.each do |x|
 				print "#{x} "
 			end
+			if #letter guessed is in the current word from the array/show secret word with the letter they guessed
 		end
 	end
 
