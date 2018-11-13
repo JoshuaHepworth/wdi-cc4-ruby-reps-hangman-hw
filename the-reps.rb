@@ -175,16 +175,17 @@ word_array = ["Xbox", "Playstation", "Sega", "Gamecube", "Atari", "Nintendo", "D
 alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", 
 "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
+# underlined_word = "_" * word_array.length
+
+# secret_word = underlined_word.sample
+
+# p secret_word
 class Word
 	def initialize
 
 	end
 	def check_letter?
 
-	end
-	def print_stats
-		print remaining_guesses
-		print guessed_letters
 	end
 	def remaining_guesses
 		# number of guesses left
@@ -197,7 +198,7 @@ class Word
 	end
 end
 
-my_game = Word.new 
+game = Word.new 
 
 
 loop do
@@ -208,18 +209,17 @@ loop do
 		puts "I get it, you're scared. Bye!"
 		break
 	else
-		print "#{input} you say? Well then lets get started! (type P to start game)"
-	end
-		input = gets.chomp
-			if input == "p"
-				word_array.each do |x|
-					word_array.sample
-					print "_ "
-			end
-			alphabet.each do |x|
-				print "#{x} "
-			end
-			if #letter guessed is in the current word from the array/show secret word with the letter they guessed
+		print "Well then lets get started! "
+			# print	word_array.sample
+			secret_word = word_array.sample
+			underlined_word = " _ " * secret_word.length
+			print underlined_word
+
+			# alphabet.each do |x|
+			# 	print " #{x} "
+			# end
+			 #letter guessed is in the current word from the array/show secret word with the letter they guessed
+			 break
 		end
 	end
 
