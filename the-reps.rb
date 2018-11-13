@@ -199,14 +199,18 @@ loop do
 		break
 	else
 		print "#{input} you say? Well then lets get started! (type P to start game)"
+	end
 		input = gets.chomp
 			if input == "p"
 				word_array.each do |x|
 					print "_ "
 			end
+			puts "\n\n"
+			alphabet.each do |x|
+				print "#{x} "
+			end
 		end
 	end
-end
 
 
 
